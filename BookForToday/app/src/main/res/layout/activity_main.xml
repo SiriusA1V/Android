@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.andrstudy.bookfortoday.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="412dp"
+        android:layout_height="142dp"
+        android:background="@drawable/background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        android:scaleType="centerCrop" />
+
+    <HorizontalScrollView
+        android:layout_marginTop="10dp"
+        android:layout_width="412dp"
+        android:layout_height="120dp"
+        android:id="@+id/scrollView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:id="@+id/button1"
+                android:background="@drawable/kid"
+                android:layout_marginLeft="10dp"/>
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:id="@+id/button2"
+                android:background="@drawable/man"
+                android:layout_marginLeft="10dp"/>
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:id="@+id/button3"
+                android:background="@drawable/saddle"
+                android:layout_marginLeft="10dp"/>
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:id="@+id/button4"
+                android:background="@drawable/blue"
+                android:layout_marginLeft="10dp"/>
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:id="@+id/button5"
+                android:background="@drawable/fantasy"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2017년"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="111dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textColor="#FFFFFF"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="11월21일"
+        app:layout_constraintLeft_toRightOf="@+id/textView"
+        android:layout_marginLeft="7dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="92dp"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        android:layout_marginStart="7dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="화요일"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="111dp"
+        app:layout_constraintLeft_toRightOf="@+id/textView2"
+        android:layout_marginLeft="8dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginStart="8dp" />
+
+    <FrameLayout
+        android:layout_width="381dp"
+        android:layout_height="293dp"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+        <ImageView
+            android:id="@+id/f_imageView"
+            android:layout_width="210dp"
+            android:layout_height="140dp"
+            android:background="@drawable/kid"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="16dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="72dp"
+            android:text="세상의\n어린이들"
+            android:textSize="25dp"
+            app:layout_constraintStart_toEndOf="@+id/f_imageView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/f_imageView"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp" />
+
+        <ScrollView
+            android:layout_width="355dp"
+            android:layout_height="137dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/f_imageView"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="16dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sampler Lee, 2017, 샘플 출판사\n\n\n\n\n작가가 6개월 간 배낭 여행을 다니며 찍은\n 세계 각국의 어린이 사진들"
+                android:textSize="18dp"
+                android:focusable="false"/>
+        </ScrollView>
+    </android.support.constraint.ConstraintLayout>
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+            <ImageView
+                android:id="@+id/f_imageView2"
+                android:layout_width="210dp"
+                android:layout_height="140dp"
+                android:background="@drawable/man"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginStart="16dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="72dp"
+                android:text="세상의\n남자들"
+                android:textSize="25dp"
+                app:layout_constraintStart_toEndOf="@+id/f_imageView2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/f_imageView2"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp" />
+
+            <ScrollView
+                android:layout_width="355dp"
+                android:layout_height="137dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/f_imageView2"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginStart="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sampler Lee, 2017, 샘플 출판사\n\n\n\n\n작가가 6개월 간 배낭 여행을 다니며 찍은\n 세계 각국의 남자 사진들"
+                    android:textSize="18dp"
+                    android:focusable="false"/>
+            </ScrollView>
+        </android.support.constraint.ConstraintLayout>
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+            <ImageView
+                android:id="@+id/f_imageView3"
+                android:layout_width="210dp"
+                android:layout_height="140dp"
+                android:background="@drawable/saddle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginStart="16dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="72dp"
+                android:text="세상의\n슬픔"
+                android:textSize="25dp"
+                app:layout_constraintStart_toEndOf="@+id/f_imageView3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/f_imageView3"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp" />
+
+            <ScrollView
+                android:layout_width="355dp"
+                android:layout_height="137dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/f_imageView3"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginStart="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sampler Lee, 2017, 샘플 출판사\n\n\n\n\n작가가 6개월 간 배낭 여행을 다니며 찍은\n 세계 각국의 슬픈 사진들"
+                    android:textSize="18dp"
+                    android:focusable="false"/>
+            </ScrollView>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+            <ImageView
+                android:id="@+id/f_imageView4"
+                android:layout_width="210dp"
+                android:layout_height="140dp"
+                android:background="@drawable/blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginStart="16dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="72dp"
+                android:text="세상의\n파랑"
+                android:textSize="25dp"
+                app:layout_constraintStart_toEndOf="@+id/f_imageView4"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/f_imageView4"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp" />
+
+            <ScrollView
+                android:layout_width="355dp"
+                android:layout_height="137dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/f_imageView4"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginStart="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sampler Lee, 2017, 샘플 출판사\n\n\n\n\n작가가 6개월 간 배낭 여행을 다니며 찍은\n 세계 각국의 파란 사진들"
+                    android:textSize="18dp"
+                    android:focusable="false"/>
+            </ScrollView>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+            <ImageView
+                android:id="@+id/f_imageView5"
+                android:layout_width="210dp"
+                android:layout_height="140dp"
+                android:background="@drawable/fantasy"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginStart="16dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="72dp"
+                android:text="세상의\n판타지"
+                android:textSize="25dp"
+                app:layout_constraintStart_toEndOf="@+id/f_imageView5"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/f_imageView5"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp" />
+
+            <ScrollView
+                android:layout_width="355dp"
+                android:layout_height="137dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/f_imageView5"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginStart="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sampler Lee, 2017, 샘플 출판사\n\n\n\n\n작가가 6개월 간 배낭 여행을 다니며 찍은\n 세계 각국의 판타지 사진들"
+                    android:textSize="18dp"
+                    android:focusable="false"/>
+            </ScrollView>
+        </android.support.constraint.ConstraintLayout>
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>
